@@ -1,0 +1,25 @@
+name: github-actions-secrets-mgmt
+description: 'A GitHub Action to manage GitHub Actions secrets programmatically.'
+author: 'Renzo Franceschini'
+inputs:
+  OWNER:
+    description: 'The owner of the repository'
+    required: true
+  REPOSITORY:
+    description: 'The name of the repository'
+    required: true
+  ACCESS_TOKEN:
+    description: 'The personal access token for authentication'
+    required: true
+  SECRET_NAME:
+    description: 'The name of the secret to be created or updated'
+    required: true
+  SECRET_VALUE:
+    description: 'The value of the secret to be created or updated'
+    required: false
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+branding:
+  icon: 'lock'
+  color: 'blue'
