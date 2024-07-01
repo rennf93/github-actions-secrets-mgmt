@@ -36,13 +36,15 @@ This Actions project provides a tool to manage GitHub Actions secrets programmat
 
 `REPOSITORY` is the name of the respository where the secret is to be created or updated. <b>Required</b>.
 
-`ACCESS_TOKEN` is the personal access token to use for authentication against the repository where the secret is stored. Using `secrets.GIHUB_TOKEN` will not work. Follo steps [here](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) to create one if you dont already have one. Besure to allow the token to be used to read user public keys. <b>Required</b>.
+`ACCESS_TOKEN` is the personal access token (PAT) to use for authentication against the repository where the secret is stored. Using `secrets.GIHUB_TOKEN` will not work. Follow steps [here](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) to create one if you dont already have one. Besure to allow the token to be used to read user public keys.
+
+<b>Required</b>:
 ![permission](permission.png)
 
 
 `SECRET_NAME` is the name of the secret to be created or updated. <b>Required</b>.
 
-`SECRET_VALUE` is value the secret should be set to. <b>Optional</b>. This should be an output from a previous step or job(https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idoutputs). !!! DO NOT HARDCODE THIS, IT'S NOT SECURE !!!
+`SECRET_VALUE` is value the secret should be set to. <b>Optional</b>. This should be an output from a previous step or job. For reference: [here](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idoutputs)
 
 
 To view the newly created secret, navigate to settings >> secrets >> actions in the Github repository portal.
