@@ -1,11 +1,15 @@
 #!/bin/sh -l
 
-# Extract inputs from with github context
-OWNER=$INPUT_OWNER
-REPOSITORY=$INPUT_REPOSITORY
-ACCESS_TOKEN=$INPUT_ACCESS_TOKEN
-SECRET_NAME=$INPUT_SECRET_NAME
-SECRET_VALUE=$INPUT_SECRET_VALUE
+# Debugging: Print all INPUT_ prefixed environment variables
+echo "Debugging INPUT variables:"
+env | grep INPUT_
+
+# Extract inputs from 'with' GitHub context using the INPUT_ prefix
+OWNER="${INPUT_OWNER}"
+REPOSITORY="${INPUT_REPOSITORY}"
+ACCESS_TOKEN="${INPUT_ACCESS_TOKEN}"
+SECRET_NAME="${INPUT_SECRET_NAME}"
+SECRET_VALUE="${INPUT_SECRET_VALUE}"
 
 # Check if required inputs are provided
 if [ -z "$OWNER" ]; then

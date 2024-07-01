@@ -22,13 +22,7 @@ inputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args:
-    - ${{ inputs.OWNER }}
-    - ${{ inputs.REPOSITORY }}
-    - ${{ inputs.ACCESS_TOKEN }}
-    - ${{ inputs.SECRET_NAME }}
-    - ${{ inputs.SECRET_VALUE }}
-    
+
 branding:
   icon: 'lock'
   color: 'blue'
