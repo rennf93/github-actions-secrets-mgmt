@@ -17,7 +17,7 @@ inputs:
     required: true
   SECRET_VALUE:
     description: 'The value of the secret to be created or updated'
-    required: false
+    required: true
 
 runs:
   using: 'docker'
@@ -28,7 +28,7 @@ runs:
     - ${{ inputs.ACCESS_TOKEN }}
     - ${{ inputs.SECRET_NAME }}
     - ${{ inputs.SECRET_VALUE }}
-
+    
 branding:
   icon: 'lock'
   color: 'blue'

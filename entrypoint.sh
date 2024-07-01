@@ -1,11 +1,11 @@
 #!/bin/sh -l
 
-# Extract inputs
-OWNER=$1
-REPOSITORY=$2
-ACCESS_TOKEN=$3
-SECRET_NAME=$4
-SECRET_VALUE=$5
+# Extract inputs from environment variables
+OWNER=${INPUT_OWNER}
+REPOSITORY=${INPUT_REPOSITORY}
+ACCESS_TOKEN=${INPUT_ACCESS_TOKEN}
+SECRET_NAME=${INPUT_SECRET_NAME}
+SECRET_VALUE=${INPUT_SECRET_VALUE}
 
 # Check if required inputs are provided
 if [ -z "$OWNER" ]; then
