@@ -16,5 +16,8 @@ RUN pip install --upgrade pip && \
     pip install -r requirements.pip
 
 COPY ./run.py ./run.py
+COPY ./entrypoint.sh /entrypoint.sh
 
-ENTRYPOINT ["/usr/local/bin/python", "/usr/src/app/run.py"]
+RUN chmod +x /entrypoint.sh
+
+ENTRYPOINT ["/entrypoint.sh"]

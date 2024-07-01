@@ -1,6 +1,7 @@
 name: 'GitHub Actions Secrets Management'
 description: 'A GitHub Action to manage GitHub Actions secrets programmatically.'
 author: 'Renzo Franceschini'
+
 inputs:
   OWNER:
     description: 'The owner of the repository'
@@ -17,6 +18,7 @@ inputs:
   SECRET_VALUE:
     description: 'The value of the secret to be created or updated'
     required: false
+
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -26,6 +28,7 @@ runs:
     - ${{ inputs.ACCESS_TOKEN }}
     - ${{ inputs.SECRET_NAME }}
     - ${{ inputs.SECRET_VALUE }}
+
 branding:
   icon: 'lock'
   color: 'blue'
