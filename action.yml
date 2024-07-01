@@ -1,4 +1,4 @@
-name: github-actions-secrets-mgmt
+name: 'GitHub Actions Secrets Management'
 description: 'A GitHub Action to manage GitHub Actions secrets programmatically.'
 author: 'Renzo Franceschini'
 inputs:
