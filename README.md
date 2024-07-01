@@ -22,7 +22,7 @@ This Actions project provides a tool to manage GitHub Actions secrets programmat
 ```yaml
 - name: Create or update Github Actions secret
   uses: rennf93/github-actions-secrets-mgmt@v1.0
-  env:
+  with:
     OWNER: <github_handle>
     REPOSITORY: <target_repository>
     ACCESS_TOKEN: <personal_access_token>
