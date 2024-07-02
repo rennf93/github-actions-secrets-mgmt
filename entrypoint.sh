@@ -11,6 +11,13 @@ ACCESS_TOKEN="${INPUT_ACCESS_TOKEN}"
 SECRET_NAME="${INPUT_SECRET_NAME}"
 SECRET_VALUE="${INPUT_SECRET_VALUE}"
 
+# Debugging: Print extracted variables
+echo "OWNER: $OWNER"
+echo "REPOSITORY: $REPOSITORY"
+echo "ACCESS_TOKEN: $ACCESS_TOKEN"
+echo "SECRET_NAME: $SECRET_NAME"
+echo "SECRET_VALUE: $SECRET_VALUE"
+
 # Check if required inputs are provided
 if [ -z "$OWNER" ]; then
   echo "OWNER is a required input and must be set."
