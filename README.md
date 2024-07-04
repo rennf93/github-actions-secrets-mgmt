@@ -57,3 +57,6 @@ To view the newly created secret, navigate to settings >> secrets >> actions in 
 1. [Create or update a repository secret
 ](https://docs.github.com/en/rest/actions/secrets#create-or-update-a-repository-secret)
 1. [Custom actions](https://docs.github.com/en/actions/creating-actions/about-custom-actions)
+
+
+![Custom Badge](https://rennf93.github.io/project-assets/images/rf-icon.png)
