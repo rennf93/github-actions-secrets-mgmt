@@ -48,6 +48,9 @@ jobs:
         secrets: |
           DOCKER_IMAGE=${{ secrets.DOCKER_IMAGE }}
 
+    - name: Pull Docker Image
+      run: docker pull ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_IMAGE }}:latest
+
     - name: Docker Scout
       id: docker-scout
       uses: docker/scout-action@v1.9.3
@@ -59,6 +62,10 @@ jobs:
         ignore-unchanged: true
         only-fixed: true
         organization: ${{ secrets.DOCKER_USERNAME }}
+        summary: true
+        format: json
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        write-comment: true
 
     - name: Run tests
       run: python -m unittest discover
