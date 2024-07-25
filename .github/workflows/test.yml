@@ -1,10 +1,19 @@
 name: CI
 
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - master
+  pull_request_target:
+    branches:
+      - master
 
 jobs:
   test:
     runs-on: ubuntu-latest
+
+    permissions:
+      pull-requests: write
 
     steps:
     - name: Checkout repository
