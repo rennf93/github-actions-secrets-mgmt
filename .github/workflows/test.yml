@@ -34,6 +34,9 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
         ecr: auto
         logout: true
+      env:
+        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
 
     - name: Verify Docker Login
       run: docker info
